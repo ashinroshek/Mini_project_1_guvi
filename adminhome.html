@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home</title>
+    <link rel="stylesheet" href="admin-home.css">
+</head>
+<body>
+  
+    <nav class="navbar">
+        <div class="logo">EMS</div>
+        <ul class="nav-links">
+			<li>  <a th:href="@{/employees}">View Employees</a></li>
+			<li><a th:href="@{/register}">Add Employee</a></li>
+			<li><a href="/admin/login">Logout</a></li>
+        </ul>
+    </nav>
+
+ 
+    <div class="welcome-message">
+        <h1>Welcome, Admin!</h1>
+        <p>You have successfully logged in.</p>
+    </div>
+</body>
+</html>

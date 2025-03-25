@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My Profile</title>
+	<link rel="stylesheet" href="profile.css">
+</head>
+
+<body>
+	<!-- Navbar -->
+	<nav class="navbar">
+		<div class="logo">EMS</div>
+		<ul class="nav-links">
+			<li><a th:href="@{/profile}">My Profile</a></li>
+			<li><a href="/user/login">Logout</a></li>
+		</ul>
+	</nav>
+
+	<!-- Profile Details -->
+	<div class="profile-container">
+		<h1>My Profile</h1>
+		<p><strong>Employee Id:</strong> <span th:text="${user.id}"></span></p>
+		<p><strong>First Name:</strong> <span th:text="${user.firstname}"></span></p>
+		<p><strong>Last Name:</strong> <span th:text="${user.lastname}"></span></p>
+		<p><strong>Email:</strong> <span th:text="${user.email}"></span></p>
+		<p><strong>Phone Number:</strong> <span th:text="${user.phoneNumber}"></span></p>
+		<p><strong>Department:</strong> <span th:text="${user.department}"></span></p>
+		<p><strong>Position:</strong> <span th:text="${user.position}"></span></p>
+		<p><strong>Salary:</strong> <span th:text="${user.salary}"></span></p>
+
+	</div>
+</body>
+
+</html>
